@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:11:41 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/15 16:40:19 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/16 16:18:31 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (big[i + j] == little[j] &&
-			(i + j) < len)
+		while (big[i + j] == little[j]
+			&& (i + j) < len)
 		{
 			if (!little[++j])
 				return ((char *)&big[i]);
