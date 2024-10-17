@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:09:14 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/14 13:47:39 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/17 14:43:58 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	dup = (char *)malloc(ft_strlen(s) + 1);
-	if (dup == NULL)
+	if (!dup)
 		return (NULL);
 	while (s[i])
 	{

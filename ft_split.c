@@ -6,9 +6,14 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:01 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/09 13:17:01 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/17 18:26:11 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+char	**ft_split(char const *s, char c)
+{
+
+}
 
 int	main(void)
 {
