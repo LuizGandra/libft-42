@@ -6,12 +6,26 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:16:37 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/09 13:16:37 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:06:40 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+
+/*
+#include <fcntl.h>
 int	main(void)
 {
-	// TODO
+	int	fd;
+
+	fd = open("testfile.txt", O_WRONLY);
+	ft_putchar_fd('X', fd);
+	close(fd);
 	return (0);
 }
+*/

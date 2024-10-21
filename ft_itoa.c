@@ -6,18 +6,11 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:06 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/19 17:49:18 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:54:53 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static unsigned int	check_sign(int n)
-{
-	if (n < 0)
-		return (1);
-	return (0);
-}
 
 static unsigned int	get_numlen(int n)
 {
@@ -26,6 +19,8 @@ static unsigned int	get_numlen(int n)
 	if (!n)
 		return (1);
 	len = 0;
+	if (n < 0)
+		len++;
 	while (n)
 	{
 		n /= 10;
@@ -34,43 +29,36 @@ static unsigned int	get_numlen(int n)
 	return (len);
 }
 
-static char	*parse_number(char *str, long long n)
+static void	parse_number(long long n, char *str, unsigned int *i)
 {
 	if (n > 9)
-		parse_number(str - 1, n / 10);
-	*str = (n % 10) + '0';
-	return (str);
+		parse_number(n / 10, str, i);
+	str[(*i)++] = (n % 10) + '0';
 }
 
-#include <stdio.h>
 char	*ft_itoa(int n)
 {
 	char			*str;
-	unsigned int	len;
-	unsigned int	is_negative;
+	unsigned int	i;
 	long long		long_n;
 
-	len = get_numlen(n);
-	is_negative = check_sign(n);
-	str = malloc(len + is_negative + 1);
+	str = malloc(get_numlen(n) + 1);
 	if (!str)
 		return (NULL);
-	str[len + is_negative] = '\0';
+	i = 0;
 	long_n = n;
-	if (is_negative)
+	if (long_n < 0)
 	{
+		str[i++] = '-';
 		long_n = -long_n;
-		*str = '-';
-		str++;
-		return (parse_number(&str[len - 1], long_n) - len);
 	}
-	else
-	{
-		return (parse_number(&str[len - 1], long_n) - len + 1);
-	}
+	parse_number(long_n, str, &i);
+	str[i] = '\0';
+	return (str);
 }
 
 /*
+#include <stdio.h>
 int	main(void)
 {
 	printf("%s\n", ft_itoa(-2147483648));
@@ -79,6 +67,7 @@ int	main(void)
 	printf("%s\n", ft_itoa(0));
 	printf("%s\n", ft_itoa(9));
 	printf("%s\n", ft_itoa(42));
+	printf("%s\n", ft_itoa(2147483647));
 	return (0);
 }
 */

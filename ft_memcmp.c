@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:16:08 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/16 18:25:31 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:19:38 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*temp_s1;
 	unsigned char	*temp_s2;
-	size_t	i;
+	size_t			i;
 
 	if (!n)
 		return (0);
