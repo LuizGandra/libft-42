@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:16:17 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/21 17:46:57 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/21 17:56:18 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(temp, m_size);
 	return (temp);
 }
-
 
 /*
 #include <stdio.h>

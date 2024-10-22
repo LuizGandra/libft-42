@@ -14,17 +14,21 @@ ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 OBJECTS := $(SOURCES:.c=.o)
+BONUS_OBJECTS := $(SOURCES_BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	@$(AR) $(ARFLAGS) $@ $^
 
+bonus: $(BONUS_OBJECTS)
+	@$(AR) $(ARFLAGS) $(NAME) $^
+
 %.o: %.c $(HEADERS)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@$(RM) $(OBJECTS)
+	@$(RM) $(OBJECTS) $(BONUS_OBJECTS)
 
 fclean: clean
 	@$(RM) $(NAME)
@@ -34,4 +38,4 @@ re: fclean all
 norm:
 	@norminette -R CheckForbiddenSourceHeader
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
