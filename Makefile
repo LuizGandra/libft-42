@@ -38,4 +38,4 @@ re: fclean all
 norm:
 	@norminette -R CheckForbiddenSourceHeader
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re bonus norm
