@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:06 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 12:11:28 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 12:33:21 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static size_t	get_numlen(int n)
 	return (len);
 }
 
-static void	parse_number(long long n, char *str, unsigned int *i)
+static void	parse_number(long long n, char *str, size_t *i)
 {
 	if (n > 9)
 		parse_number(n / 10, str, i);
