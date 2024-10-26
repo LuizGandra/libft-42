@@ -6,12 +6,11 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:01 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/19 16:07:49 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 12:08:27 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void	*clean_mem(char **mem)
 {
@@ -43,9 +42,9 @@ static unsigned int	count_words(char const *s, char c)
 
 static char	**split_str(char **arr, char const *s, char c)
 {
-	char			*temp;
-	unsigned int	len;
-	unsigned int	i;
+	char	*temp;
+	size_t	len;
+	size_t	i;
 
 	i = 0;
 	while (*s)
@@ -83,11 +82,12 @@ char	**ft_split(char const *s, char c)
 }
 
 /*
+#include <stdio.h>
 int	main(void)
 {
 	char	*str;
 	char	**splitted_str;
-	int		i;
+	int	i;
 
 	str = "lorem ipsum dolor sit amet,
 		consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,

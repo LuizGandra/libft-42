@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:16:56 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/17 18:36:11 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 12:05:48 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
+	size_t	i;
 
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;

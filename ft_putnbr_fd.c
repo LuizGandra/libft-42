@@ -6,12 +6,11 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:49 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/21 16:15:45 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 12:27:46 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 static void	write_number(long long n, int fd)
 {
@@ -20,7 +19,7 @@ static void	write_number(long long n, int fd)
 	if (n > 9)
 		write_number(n / 10, fd);
 	c = (n % 10) + '0';
-	write(fd, &c, 1);
+	ft_putchar(c, fd);
 }
 
 void	ft_putnbr_fd(int n, int fd)
@@ -31,13 +30,14 @@ void	ft_putnbr_fd(int n, int fd)
 	if (long_n < 0)
 	{
 		long_n = -long_n;
-		write(fd, "-", 1);
+		ft_putchar('-', fd);
 	}
 	write_number(long_n, fd);
 }
 
 /*
 #include <fcntl.h>
+#include <unistd.h>
 int	main(void)
 {
 	int	fd;

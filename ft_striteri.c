@@ -6,14 +6,16 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:20 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/21 15:29:28 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 12:20:21 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	i;
+	size_t	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -24,7 +26,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 
 /*
 #include <stdio.h>
-void	striteri_tester(unsigned int i, char *str)
+static void	striteri_tester(unsigned int i, char *str)
 {
 	*str = *str + i;
 }

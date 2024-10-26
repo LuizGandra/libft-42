@@ -6,15 +6,15 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:06 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/21 14:54:53 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 12:11:28 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	get_numlen(int n)
+static size_t	get_numlen(int n)
 {
-	unsigned int	len;
+	size_t	len;
 
 	if (!n)
 		return (1);
@@ -38,9 +38,9 @@ static void	parse_number(long long n, char *str, unsigned int *i)
 
 char	*ft_itoa(int n)
 {
-	char			*str;
-	unsigned int	i;
-	long long		long_n;
+	char		*str;
+	size_t		i;
+	long long	long_n;
 
 	str = malloc(get_numlen(n) + 1);
 	if (!str)

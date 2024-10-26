@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:16:17 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/21 17:56:18 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 11:49:09 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	m_size;
 	void	*temp;
 
-	m_size = nmemb * size;
 	if (!nmemb || !size)
 		return (malloc(0));
+	m_size = nmemb * size;
 	if (m_size / size != nmemb)
 		return (NULL);
 	temp = malloc(m_size);

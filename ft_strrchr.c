@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:11:44 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/15 16:21:35 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 11:25:55 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		len;
+	size_t	i;
 
-	len = ft_strlen(s);
+	i = ft_strlen(s);
 	while (len >= 0)
 	{
-		if (s[len] == (unsigned char)c)
-			return ((char *)&s[len]);
-		len--;
+		if (s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
+		i--;
 	}
 	return (NULL);
 }

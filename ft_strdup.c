@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:09:14 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/17 14:43:58 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 11:57:56 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(const char *s)
 {
 	char	*dup;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	dup = (char *)malloc(ft_strlen(s) + 1);

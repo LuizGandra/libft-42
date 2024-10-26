@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:16:49 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/17 16:43:41 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 12:02:46 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*temp;
-	int		s1_len;
-	int		temp_size;
+	size_t	s1_len;
+	size_t	temp_size;
 
 	s1_len = ft_strlen(s1);
 	temp_size = s1_len + ft_strlen(s2) + 1;
