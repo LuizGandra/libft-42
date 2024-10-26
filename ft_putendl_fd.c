@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:40 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 12:28:42 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 15:35:07 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	ft_putendl_fd(char *s, int fd)
 }
 
 /*
-#include <unistd.h>
 #include <fcntl.h>
 int	main(void)
 {

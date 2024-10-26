@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:49 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 12:34:20 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 15:34:52 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	ft_putnbr_fd(int n, int fd)
 
 /*
 #include <fcntl.h>
-#include <unistd.h>
 int	main(void)
 {
 	int	fd;

@@ -6,11 +6,9 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:13:51 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/15 14:53:42 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 15:32:13 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isalpha(int c)
 {
@@ -18,6 +16,7 @@ int	ft_isalpha(int c)
 }
 
 /*
+#include <stdio.h>
 int	main(void)
 {
 	printf("c retorna %i\n", ft_isalpha('c')); // 1
