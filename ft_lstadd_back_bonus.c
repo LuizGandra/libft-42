@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:19:02 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/22 18:21:23 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/26 13:46:11 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,14 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if (lst)
+	if (!lst || !new)
+		return ;
+	if (!*lst)
+		*lst = new;
+	else
 	{
-		if (!*lst)
-			*lst = new;
-		else
-		{
-			temp = ft_lstlast(*lst);
-			temp->next = new;
-		}
+		temp = ft_lstlast(*lst);
+		temp->next = new;
 	}
 }
 
