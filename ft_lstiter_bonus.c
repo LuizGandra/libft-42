@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:19:27 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 14:16:07 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/29 15:01:54 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*temp;
-
 	if (!lst || !f)
 		return ;
-	temp = lst;
-	while (temp)
+	while (lst)
 	{
-		f(temp->content);
-		temp = temp->next;
+		f(lst->content);
+		lst = lst->next;
 	}
 }
 

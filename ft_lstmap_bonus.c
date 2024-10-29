@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:19:35 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 14:38:03 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/29 15:03:13 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,20 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*node;
-	t_list	*temp;
 
 	if (!lst || !f || !del)
 		return (NULL);
-	temp = lst;
 	new_list = NULL;
-	while (temp)
+	while (lst)
 	{
-		node = ft_lstnew(f(temp->content));
+		node = ft_lstnew(f(lst->content));
 		if (!node)
 		{
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_list, node);
-		temp = temp->next;
+		lst = lst->next;
 	}
 	return (new_list);
 }
