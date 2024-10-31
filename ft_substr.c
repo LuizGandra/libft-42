@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:16:43 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/17 16:22:21 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:11:56 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if ((len_s - start) < len)
 		len = len_s - start;
-	substr = malloc(len + 1);
+	substr = (char *)malloc(len + 1);
 	if (!substr)
 		return (NULL);
 	ft_strlcpy(substr, s + start, len + 1);

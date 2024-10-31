@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:06 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 12:33:21 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:11:35 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 	size_t		i;
 	long long	long_n;
 
-	str = malloc(get_numlen(n) + 1);
+	str = (char *)malloc(get_numlen(n) + 1);
 	if (!str)
 		return (NULL);
 	i = 0;
