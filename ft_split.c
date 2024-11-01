@@ -6,7 +6,7 @@
 /*   By: lcosta-g <lcosta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:17:01 by lcosta-g          #+#    #+#             */
-/*   Updated: 2024/10/26 12:08:27 by lcosta-g         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:24:32 by lcosta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ static char	**split_str(char **arr, char const *s, char c)
 			s += len;
 		}
 	}
-	arr[i] = NULL;
 	return (arr);
 }
 
@@ -75,7 +74,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	arr = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	arr = (char **)ft_calloc((count_words(s, c) + 1), sizeof(char *));
 	if (!arr)
 		return (NULL);
 	return (split_str(arr, s, c));
