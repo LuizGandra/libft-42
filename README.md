@@ -11,7 +11,7 @@ Libft is a custom C library developed as the first project of the **Common Core*
 - Implementing commonly used functions in the C standard library
 - Manipulating data types and data structures in C
 
-## Getting Started
+## How to Test
 To compile and use the library, clone the repository and run `make` in the terminal. This will generate a libft.a file, which you can link to your C projects.
 
 ## Project Structure
