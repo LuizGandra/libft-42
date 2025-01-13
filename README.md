@@ -1,7 +1,7 @@
 # Libft
 Libft is a custom C library developed as the first project of the **Common Core** curriculum at [**42 São Paulo**](https://www.42sp.org.br/). This project focuses on building essential programming skills in C by recreating standard library functions and other additional functions.
 
-**Note:** *Libft is updated and maintained as needed throughout the Common Core. The contents of this repository do not necessarily represent the approved project, although it always complies with the **Norm***.
+**Note:** *Libft is updated and maintained throughout Common Core. Despite this, the contents of this repository represent the delivered version of my project, with only a few improvements and changes.*.
 
 ## What You Will Learn
 - Basic C syntax and conventions
