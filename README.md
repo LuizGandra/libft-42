@@ -13,6 +13,7 @@ Libft is a custom C library developed as the first project of the **Common Core*
 
 ## How to Test
 To compile and use the library, clone the repository and run `make` in the terminal. This will generate a libft.a file, which you can link to your C projects.
+***Note:** _the project is separated into two parts, the mandatory and the bonus. If you want to compile the project with the bonus, run `make bonus`_.
 
 ## Project Structure
 The project is divided into three main parts:
