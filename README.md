@@ -57,7 +57,7 @@ This includes linked list functions in `libft.a`.
 4. Link the library to your C project:
    
    ```bash
-   clang -o <program> <file>.c -L -lft
+   clang -o <program> <file>.c -L<libft.a directory> -lft
 
 #### Additional commands
 
