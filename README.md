@@ -32,8 +32,8 @@ Libft provides a collection of functions split into two sections:
 
 ### Prerequisites
 
-- C compiler (e.g., `clang`)
-- `make` utility
+- C compiler (e.g., `clang`).
+- `make` utility.
 
 ### How to Build and Run
 
