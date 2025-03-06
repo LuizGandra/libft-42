@@ -31,20 +31,24 @@ Libft provides a collection of functions split into two sections:
 
 ### How to Build and Run
 1. Clone the repository:
+   
    ```bash
    git clone https://github.com/LuizGandra/libft-42.git
    cd libft-42
 
 2. Build the mandatory part:
+   
    ```bash
    make
 
 3. Build the bonus part (optional):
+   
    ```bash
    make
 This includes linked list functions in `libft.a`.
 
 4. Link the library to your C project:
+   
    ```bash
    clang -o <program> <file>.c -L -lft
 
